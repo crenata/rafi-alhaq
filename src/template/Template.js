@@ -21,7 +21,7 @@ class Template extends PureComponent {
                     {this.props.children}
                     <Footer/>
                 </div>
-                
+
                 <script
                     defer
                     src="https://static.cloudflareinsights.com/beacon.min.js/vaafb692b2aea4879b33c060e79fe94621666317369993"

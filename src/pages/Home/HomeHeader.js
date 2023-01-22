@@ -1,6 +1,13 @@
 import React, {PureComponent} from "react";
 
 class HomeHeader extends PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = {
+            search: ""
+        };
+    }
+
     render() {
         return (
             <div
@@ -34,10 +41,11 @@ class HomeHeader extends PureComponent {
                                     </div>
                                     <input
                                         type="text"
-                                        value=""
+                                        value={this.state.search}
+                                        onChange={event => this.setState({search: event.target.value})}
                                         placeholder="Search for a job title"
                                         name="query"
-                                        required="required"
+                                        required={true}
                                     />
                                 </div>
                                 <button type="submit">
